@@ -1,10 +1,3 @@
-/* @override
-    http://localhost:8080/4/portal_css/Sunburst%20Theme/public.css
-    http://localhost:8080/sprites/portal_css/Sunburst%20Theme/public.css
-*/
-
-/* @group Navigation/search */
-
 #portal-header {
     position: relative;
     z-index: 2;
@@ -13,8 +6,6 @@
     display: inline-block;
     margin: 1.375em 0;
 }
-/* removes extra space above logo in IE6 and IE7 */
-/* .ie6 and .ie7 is set on <html> by Modernizr library */
 .ie6 #portal-logo,
 .ie7 #portal-logo {
     margin-top: 0;
@@ -31,8 +22,6 @@
     background: none transparent;
     min-width: 6em;
     white-space: normal;
-    /*TODO: Once we have removed the whitespace from the nav template, this can be put back*/
-    /*border-bottom: 0.1em solid White;*/
     border-right: 0.1em solid white;
 }
 #portal-globalnav .selected a,
@@ -46,7 +35,7 @@
     float: right;
     background: none transparent;
     position: relative;
-    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
+    z-index: 3;
     top: 0;
     right: 0;
     padding: 0.25em 0.5em;
@@ -67,7 +56,7 @@
     position: relative;
     top: 0;
     right: 1px;
-    z-index: 3; /* portal-header has 2 and we need to be above to be clickable */
+    z-index: 3;
     padding: 0.25em 0.5em;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
@@ -96,11 +85,8 @@
     margin-bottom: 1em;
 }
 input.searchField {
-/*  -webkit-appearance: searchfield;*/
     -moz-appearance: searchfield;
 }
-/* Collapsible elements in search_form */
-
 .collapsible .collapser.collapsed {
     padding-right: 14px;
     background: url(../img/arrowRight.png) center right no-repeat;
@@ -109,9 +95,6 @@ input.searchField {
     padding-right: 14px;
     background: url(../img/arrowDown.png) center right no-repeat;
 }
-/* @end */
-
-/* @group LiveSearch */
 #LSResult {
     position: absolute;
     right: 0;
@@ -136,9 +119,6 @@ input.searchField {
 .LSHighlight {
     background: none transparent;
 }
-/* @end */
-
-/* @group Path indicator (breadcrumbs) */
 #portal-breadcrumbs {
     margin-bottom: 1em;
     margin-left: 0.25em;
@@ -147,9 +127,6 @@ input.searchField {
     border-bottom: none;
     display: inline-block;
 }
-/* @end */
-
-/* @group Site actions */
 #portal-siteactions {
     padding-bottom: 2em;
     text-align: center;
@@ -158,9 +135,6 @@ input.searchField {
 #portal-siteactions li {
     margin-right: 0.5em;
 }
-/* @end */
-
-/* @group Listings */
 a.link-anchor {
     border: none !important;
     cursor: default !important;
@@ -174,9 +148,6 @@ dl dt .documentByLine {
 dl dt span.summary a {
     border: none !important;
 }
-/* @end */
-
-/* @group Portlets */
 dl.portlet {
     margin: 0 0 1em;
 }
@@ -218,7 +189,7 @@ a.managePortletsFallback {
     -moz-border-radius: 0.5em;
 }
 a.managePortletsFallback {
-    display:inline-block; /* in order for our vertical margins to work on inline element */
+    display:inline-block;
 }
 #content a.managePortletsFallback {
     display: block;
@@ -237,9 +208,6 @@ a.managePortletsFallback {
 #dashboard-portlets4 {
     display: inline-block;
 }
-/* @end */
-
-/* @group Navigation portlet */
 dl.portlet ul.navTree li a {
     border: none;
     display: block;
@@ -263,15 +231,11 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     margin-left: -1em;
     margin-right: -1em;
 }
-/* @end */
-
-/* @group Content Area */
 #content {
     line-height: 1.5em;
     clear: both;
     margin: 1em 0.25em 2em 0.25em;
 }
-/* Special case of #content - TinyMCE */
 body#content {
     margin: 1em;
 }
@@ -401,8 +365,6 @@ dl.portlet ol {
     clear: right;
     margin: 0 0 0.5em 1em;
 }
-/* For event view template, changed headerless table to headings and divs,
- * for better accessibility.  */
 #content .eventDetails {
     border-color: #CCCCCC;
     border-style: solid;
@@ -431,10 +393,7 @@ dl.portlet ol {
 #content .eventDetails .eventDetail div {
     float: left;
     width: 55%;
-} 
-/* @end */
-
-/* @group Data tables */
+}
 table.listing,
 table.plain {
     border-spacing: 0;
@@ -508,7 +467,6 @@ table.listing td.draggable {
     border-bottom: 1px solid white;
     padding: 0.4em 0.4em 0 0.5em;
 }
-/* Vertical table data listings */
 table.vertical th {
     text-align: right;
 }
@@ -516,7 +474,6 @@ table.vertical td {
     border-top: 0.1em solid #e7e7e7;
     padding: 0.5em;
 }
-/* Grid table listings */
 table.grid td,
 table.grid th {
     border: 1px solid #e7e7e7;
@@ -547,9 +504,6 @@ div.listingBar a:hover {
     background-color: none transparent;
     border-color: #329fd7;
 }
-/* @end */
-
-/* @group Status messages */
 dl.portalMessage {
     margin: 1em 0;
     border: 1px solid #996;
@@ -596,7 +550,6 @@ dl.error {
 dl.error dd {
     background: none transparent;
 }
-/* Additional specificity for when status is shown inside #content */
 #content dl.portalMessage {
 }
 #content dl.portalMessage dt {
@@ -606,11 +559,6 @@ dl.error dd {
 #content dl.portalMessage dd {
     margin: 0;
 }
-/* @end */
-
-/* @group Editing */
-/* @group Tabs */
-/* Color differences between the two tab types */
 #content ul.formTabs {
     background: none transparent;
     border: 0.3em solid #ddd;
@@ -626,12 +574,9 @@ dl.error dd {
     float: left;
     background: none transparent;
 }
-/* fix shift on content views list under ie6 */
-/* .ie6 is set on <html> by Modernizr library */
 .ie6 ul#content-views{
     margin: -2px -3px 0px -3px;
 }
-/* Shared CSS between the two tab types */
 #edit-bar,
 #content ul.formTabs,
 #content-core ul.formTabs {
@@ -653,7 +598,6 @@ dl.error dd {
 #content-views a,
 #content li.formTab a,
 #content-core li.formTab a {
-    /* this isn't supported by all browsers, so we keep it in a separate rule */
     display: inline-block;
 }
 #content-views a,
@@ -701,10 +645,6 @@ div.field span.required:after {
 #content-core div.formControls input.hidden {
     display: none;
 }
-/* @end */
-
-/* @group Pulldown menus */
-/* @group Personal tools pulldown */
 #portal-personaltools dt {
     font-weight: normal;
 }
@@ -726,13 +666,11 @@ div.field span.required:after {
 #portal-personaltools dd a:hover {
     background: none transparent;
 }
-
-/* @end */
-/* @group Content pulldowns */
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
     background: none transparent;
     z-index: 5;
+    background:#75AD0A;
 }
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid #75ad0a;
@@ -751,8 +689,6 @@ div.field span.required:after {
 #contextHeader { 
     margin-top: 5px; 
 }
-/* @end */
-
 #contentActionMenus {
     float: right;
     background: none transparent;
@@ -807,9 +743,6 @@ dl.actionMenu.activated dd a,
 dl.actionMenu.activated dd div {
     margin: 0 0.25em;
 }
-/* @end */
-
-/* @group Control panel */
 #content ul.configlets {
     margin: 1em 0;
     list-style-image: none;
@@ -894,9 +827,6 @@ table.controlpanel-listing th.smallcolumn {
     float:right;
     padding-top:0.8em;
 }
-/* @end */
-
-/* @group Collapsible */
 dl.collapsible {
     border: 0.1em solid #8cacbb;
     margin: 1em 0;
@@ -919,7 +849,6 @@ dl.collapsible dd.collapsibleContent {
     padding: 0 1em 0.4em;
     clear: left;
 }
-/* for IE the following isn't needed, that's why the css2 selector is used */
 dl.collapsible dd.collapsibleContent > dl {
     margin: 0;
     padding: 0;
@@ -964,9 +893,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
     cursor: pointer;
     display: inline;
 }
-/* @end */
-
-/* @group Comments */
 .comment {
     margin-top: 1.5em;
 }
@@ -994,8 +920,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .comment h6 {
     font-weight: normal;
 }
-/* @end */
-
 .reviewHistory,
 .contentHistory {
     display: inline;
@@ -1013,7 +937,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
     background: none transparent;
     font-weight: normal;
 }
-/* for highlighting of search terms */
 .highlightedSearchTerm {
    background: none transparent;
 }
@@ -1021,16 +944,11 @@ dl.searchResults .highlightedSearchTerm {
     background: transparent;
     font-weight: bold;
 }
-/* for greying out inherited roles */
-/* for highlighting current items, like the language or today in the calendar */
 .currentItem {
     border-collapse: collapse;
     border: 0.2em solid #ffa500;
     padding: 0.1em;
 }
-/* @end */
-
-/* @group Search results page */
 fieldset#search-field {
     border: none !important;
     text-align: center;
@@ -1122,9 +1040,6 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 #ajax-search-res {
     display: none;
 }
-/* @end */
-
-/* @group Image alignment classes */
 .image-left {
    float: left;
    margin: 0.5em 1em 0.5em 0;
@@ -1136,8 +1051,6 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 .image-inline {
    float: none;
 }
-/*note: the tricky thing here is that image-inline|image-left|image-right
-can both be on an image and a wrapper element e.g. a dl tag*/
 img.image-left,
 img.image-right,
 .captioned img {
@@ -1145,12 +1058,9 @@ img.image-right,
 }
 dd.image-caption {
     text-align: left;
-    padding: 0 0 0 3px; /*image padding+border with*/
+    padding: 0 0 0 3px;
     margin: 0;
 }
-/* @end */
-
-/* @group Dashboard */
 #dashboard-actions ul,
 #dashboard-actions ul li {
     list-style: none;
@@ -1185,9 +1095,6 @@ dd.image-caption {
 #dashboard-portlets4 dl.portlet {
     margin-bottom:1.5em;
 }
-/* @end */
-
-/* @group Forms */
 fieldset,
 .editionComment {
     line-height:1.5em;
@@ -1195,8 +1102,6 @@ fieldset,
     padding:0 1em 1em;
     width:auto;
 }
-
-/* Emulates the styling from the h1 tag */
 #content .field input[type="text"][name$=".title"],
 #archetypes-fieldname-title input {
     line-height: 125%;
@@ -1204,8 +1109,6 @@ fieldset,
     margin: inherit -0.05em;
     font-weight: bold;
 }
-
-/* Emulates styling from the description's view */
 #content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
     font-weight: bold;
@@ -1317,8 +1220,6 @@ tr.error {
     width: 1.5em;
     display: inline-block;
 }
-
-/* @group Login form */
 body.template-logged_out #content,
 body.template-login_form #content,
 .pb-ajax #login-form {
@@ -1338,10 +1239,6 @@ body.template-new-user #content input {
 #fieldset-openid-login .formControls input, #login-form .formControls input {
     margin-left: 0.25em;
 }
-/* @end */
-
-/* @group Table of Contents */
- /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
 dl.toc {
     float: right;
     width: 35%;
@@ -1359,9 +1256,6 @@ dl.toc dd {
 dl.toc dd ol {
     margin-left: 1.5em;
 }
-/* @end */
-
-/* @group Footer */
 #portal-footer {
     background: none transparent;
     padding: 1em;
@@ -1375,9 +1269,6 @@ dl.toc dd ol {
 #portal-colophon li {
     padding:0 0.75em;
 }
-/* @end */
-
-/* @group Sitemap */
 #portal-sitemap {
     list-style: none;
     margin-left: 0;
@@ -1403,9 +1294,6 @@ dl.toc dd ol {
     margin-bottom: 0;
     padding: 0.25em 0;
 }
-/* @end */
-
-/* @group Album view classes */
 .photoAlbumEntry {
     float: left;
     position:relative;
@@ -1442,9 +1330,6 @@ dl.toc dd ol {
     width: 128px;
     height: 3.6em;
 }
-/* @end */
-
-/* @group Invisibles */
 .hiddenStructure {
     display: block;
     background: none transparent;
@@ -1455,8 +1340,6 @@ dl.toc dd ol {
     margin: -0.1em 0 0 -0.1em;
     width: 1px;
 }
-/* ensures hidden elements don't take up space */
-/* .ie6 is set on <html> by Modernizr library */
 .ie6 .hiddenStructure,
 .ie7 .hiddenStructure {
     position: absolute;
@@ -1468,37 +1351,27 @@ dl.toc dd ol {
 .visualClear {
     clear: both;
 }
-/* @end */
-
-/* @group Accessibility elements, applied by JS */
 body.largeText { 
     font-size: 125%; 
 }
 body.smallText { 
     font-size: 85%; 
 }
-/* @end */
-
-/* @group Overlay windows */
-/* styling for overlays (popups) */
 div.overlay {
     width: auto;
     height: auto;
-    /* initially overlay is hidden */
     display: none;
-    /* some padding to layout nested elements nicely  */
     margin: 1em;
 }
 div.overlay-iframe,
 div.overlay-ajax {
     width: 60%;
     min-height: 100px;
-    z-index: 99; /* overlays should be above everything */
+    z-index: 99;
 }
 div.overlay-iframe {
     height: 60%;
 }
-/* default close button positioned on upper-left corner */
 div.overlaybg div.close,
 div.overlay div.close {
     background: none transparent;
@@ -1538,8 +1411,6 @@ div.overlay div.close span {
 div.overlay textarea { 
     width: 100%;
 }
-
-/* Hide form elements that don't make sense within an overlay. */
 div.overlay .link-parent { 
     display: none; 
 }
@@ -1549,7 +1420,6 @@ div.overlay #createGroup legend {
 div.overlay #createGroup fieldset { 
     border: none; 
 }
-/* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
 div.overlay p {
     margin-bottom: 1em;
 }
@@ -1567,9 +1437,6 @@ div.overlay .formControls a {
     display: block;
     margin: 0.75em;
 }
-/* @end */
-
-/* @group Content History */
 div.historyRecord {
     margin-bottom: 1em;
 }
@@ -1622,9 +1489,6 @@ a.historyComparePrevious span {
     top: -0.75em;
     padding: 0 0.5em;
 }
-/* @end */
-
-/* @group Core content type sprites */
 .optionsBox {
     overflow-y: auto;
     border: solid 1px #999999;
@@ -1632,8 +1496,6 @@ a.historyComparePrevious span {
     height: 14em;
     width: 100%;
 }
-/* IE7: fixes super-wide div for JavaScript Tag selector */
-/* .ie7 is set on <html> by Modernizr library */
 .ie7 div.optionsBox {
     width: 50%;
 }
@@ -1647,8 +1509,6 @@ a.historyComparePrevious span {
     vertical-align: middle;
     margin: 1px 4px 4px 6px;
 }
-/* IE7: fixes super-wide div for JavaScript Tag selector */
-/* .ie7 is set on <html> by Modernizr library */
 .ie7 .optionsBox input {
     margin: 0px;
 }
@@ -1699,4 +1559,3 @@ a.historyComparePrevious span {
 #noTagsSelected, #oneOrMoreTagsSelected {
     display: none;
 }
-/* @end */

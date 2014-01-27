@@ -123,6 +123,7 @@ input[type="submit"], input[type="button"], button {
 }
 #main label {
     display:inline-block;
+    color: #000000;
 }
 #action-bar .nav-tabs a.menu:after, 
 #action-bar .nav-tabs .dropdown-toggle:after {
