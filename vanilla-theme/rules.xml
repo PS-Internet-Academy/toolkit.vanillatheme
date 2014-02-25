@@ -11,6 +11,8 @@
         css:if-content="#visual-portal-wrapper"
     />
       
+    <drop css:content="#portal-globalnav"/>  
+      
     <rules css:if-content="#visual-portal-wrapper">
     
     <drop

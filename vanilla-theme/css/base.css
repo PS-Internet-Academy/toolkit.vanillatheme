@@ -631,11 +631,13 @@ div.width-full{
         width: 100%;
         margin-top:0;
     }
-        #listing-info {
-        width: 40%;
+    #listing-info {
+        width: 100%;
+        margin-top:430px;
     }
     .listing #listing-images {
-        width: 55%;
+        position: absolute;
+        width: 100%;
     }
     .galleria-stage {
         left: 0;
@@ -724,10 +726,12 @@ div.width-full{
         margin-top:0;
     }
     #listing-info {
-        width: 40%;
+        margin-top: 430px;
+        width: 100%;
     }
     .listing #listing-images {
-        width: 55%;
+        width: 100%;
+        position:absolute;
     }
     .galleria-stage {
         left: 0;
