@@ -11,6 +11,29 @@
         css:if-content="#visual-portal-wrapper"
     />
      
+    <append 
+        css:content-children="#viewlet-above-content > .carouselWrapper"
+        css:theme="#feature-listing-above-footer"
+        method="raw"
+    />
+    
+    <drop
+        css:content=".carouselWrapper"
+    />
+    
+    <drop
+        css:theme="#feature-listing-slider"
+        css:if-not-content=".carouselWrapper"
+    />
+    
+    <drop
+        css:content="#viewlet-above-content > .carousel"
+    />
+    
+    <drop
+        css:content="#viewlet-above-content > .carouselWrapper"
+    /> 
+     
     <drop
         css:content="#portal-breadcrumbs"
     />
@@ -27,12 +50,6 @@
     
     <drop
         css:content=".carousel"
-    />
-    
-    <replace
-        css:theme="#fullscreen-slider"
-        css:content=".carousel"
-        method="raw"
     />
     
     <copy

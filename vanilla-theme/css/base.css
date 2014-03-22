@@ -1,3 +1,28 @@
+.lang{
+    display:none;   
+}
+.site-en .lang-en{
+    display:block;   
+}
+.site-es .lang-es{
+    display:block;   
+}
+#portal-languageselector li{
+    display:none;   
+}
+#portal-languageselector li.currentLanguage,#portal-languageselector:hover li{
+    display:block;   
+}
+.scrollable .items .tileItem{
+    width:320px !important;   
+    margin-right:17px;
+}
+.carousel .next{
+    left:48%;   
+}
+.carousel .prev {
+    left: -48%;
+}
 a:hover{
     text-decoration:none; 
 }
@@ -6,9 +31,6 @@ li#anon-personalbar{
 }
 #content .listing-summary figure{
     width:auto;   
-}
-#portal-column-content{
-    overflow:hidden;   
 }
 .agency_logo{
     text-align: center;
@@ -46,7 +68,7 @@ body{
     border-top-right-radius:0;
 }
 #content .listing p{
-    margin-bottom:0; 
+    margin-bottom:1.5em; 
 }
 #content .listing .visualClear p{
     margin-bottom:0; 
@@ -465,6 +487,12 @@ div.width-full{
 #move-breadcrumbs{
     margin:0 auto;   
 }
+#portal-column-one{
+    margin-left:-100%;   
+}
+#doormat-container .doormatColumn{
+    margin:0 1%;   
+}
 @media (min-width: 1200px){
     #formfield-form-widgets-object_type .collapse .option,
     #formfield-form-widgets-location_type .collapse .option,
@@ -480,7 +508,7 @@ div.width-full{
     #portal-column-one div.position-0{
         margin-left: -100%;   
     }
-    #portal-columns,#header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+    #portal-columns,#header .row,.footer .row,.colophonWrapper,#move-breadcrumbs,#navibar{
         width:1080px;   
     }
     #portal-column-two .portletWrapper{ 
@@ -617,7 +645,7 @@ div.width-full{
     #footer-wrapper .position-0{
         margin:0;
     }
-    #portal-columns,#header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+    #portal-columns,#header .row,.footer .row,.colophonWrapper,#move-breadcrumbs,#navibar{
         width:870px;   
     }
     .container{
@@ -704,7 +732,7 @@ div.width-full{
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-    #portal-columns,#header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+    #portal-columns,#header .row,.footer .row,.colophonWrapper,#move-breadcrumbs,#navibar{
         width:680px;   
     }
     #portal-column-content{
@@ -793,7 +821,7 @@ div.width-full{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
-    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs,#navibar{
         width:100%;   
     }
     #fullbgnav .navbar{
@@ -899,7 +927,11 @@ div.width-full{
     }
 } 
 @media (min-width: 481px) and (max-width: 599px){
-    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+    .footer #doormat-container .doormatColumn{
+        width:30%;
+        text-align:center;
+    }
+    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs,#navibar{
         width:100%;   
     }
     #fullbgnav .navbar{
@@ -1005,6 +1037,10 @@ div.width-full{
     }
 }
 @media (min-width: 401px) and (max-width: 480px){
+    .footer #doormat-container .doormatColumn{
+        width:48%;
+        text-align:center;
+    }
     #content .listing-summary dt{
         width: 26%;   
     }
@@ -1012,7 +1048,7 @@ div.width-full{
     #content .listing-summary dd.full{
          width: 70%;   
     }
-    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs,#navibar{
         width:100%;   
     }
     #fullbgnav .navbar{
@@ -1118,6 +1154,10 @@ div.width-full{
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
+    .footer #doormat-container .doormatColumn{
+        width:100%;
+        text-align:center;
+    }
     #content .listing-summary dt{
         width: 26%;   
     }
@@ -1230,7 +1270,128 @@ div.width-full{
         width:48.5%; 
     }
 }
-@media (max-width: 320px){
+@media (min-width: 241px) and (max-width: 320px){
+    .footer #doormat-container .doormatColumn{
+        width:100%;
+        text-align:center;
+    }
+    #content .listing-summary dt{
+        width: 100%;   
+    }
+    #content .listing-summary dd,
+    #content .listing-summary dd.full{
+         width: 70%;   
+    }
+    #header .row,.footer .row,.colophonWrapper,#move-breadcrumbs{
+        width:100%;   
+    }
+    #fullbgnav .navbar{
+        margin-left:0;   
+        margin-right:0;  
+    }
+    #portal-columns{
+        width:98%;
+        padding:0 1%;   
+    }
+    #portal-column-content{
+        left: 0;
+        margin-left: 0;
+        width: 100%; 
+    }
+    #portal-column-one{
+        width:100%;
+        margin-left: 0;
+        margin-top: 20px;
+        left:0;
+    }
+    #portal-column-two{
+        left: 0;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .container{
+        width:100%;   
+    }
+    #formfield-form-widgets-object_type .option,
+    #formfield-form-widgets-location_type .option,
+    #formfield-form-widgets-geographic_type .option,
+    #formfield-form-widgets-view_type .option,
+    #formfield-form-widgets-ownership_type .option{
+        width:49%;   
+        float: left;
+    }
+    ul.submenu{  
+        width:100%; 
+    }
+    ul.submenu li a{  
+        width:100%;
+    }
+    div.width-full{
+        width:100%;
+    }
+    #portal-colophon{
+        width:100%;
+    }
+    #portal-globalnav{
+        width: 100%;
+        margin-top:0;
+    }
+    #listing-info {
+        margin-top: 440px;
+        width: 100%;
+    }
+    .listing #listing-images {
+        position: absolute;
+        width: 100%;
+    }
+    select {
+        width: 48%;
+    }
+    #formfield-form-widgets-air_condition .option,
+    #formfield-form-widgets-pool .option,
+    #formfield-form-widgets-jacuzzi .option{
+        width:33%;   
+        float:left;
+    }
+    .listing-summary #search-form form span.option{
+        width:48%;
+    }
+    .listing-summary #search-form form .form-row-other .field span.option{
+        width: 40%;   
+    }
+    .portletQuickSearch #formfield-form-widgets-price_min{
+        width: 46%;
+    }
+    .portletQuickSearch #formfield-form-widgets-price_max{
+        width: 46%;
+    }
+    .portletQuickSearch #formfield-form-widgets-price_min,
+    .portletQuickSearch #formfield-form-widgets-price_max{
+        width: 48%;
+    }
+    .portletQuickSearch #form-widgets-beds-max,
+    .portletQuickSearch #form-widgets-baths-max,
+    .portletQuickSearch #form-widgets-lot_size-max,
+    .portletQuickSearch #form-widgets-interior_area-max,
+    .portletQuickSearch #formfield-form-widgets-price_max{
+        float:right; 
+    }
+    .listing-summary #search-form .form-row-location .field,
+    .listing-summary #search-form .form-row-price .field
+    {
+        width:32%; 
+    }
+    .listing-summary #search-form .form-row-beds-baths .field,
+    .listing-summary #search-form .form-row-sizes .field{
+        width:48.5%; 
+    }
+}
+@media (max-width: 240px) {
+    .footer #doormat-container .doormatColumn{
+        width:100%;
+        text-align:center;
+    }
     #content .listing-summary dt{
         width: 100%;   
     }

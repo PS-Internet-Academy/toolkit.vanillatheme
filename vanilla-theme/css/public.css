@@ -255,9 +255,7 @@ dl.portlet {
 #content a:visited,
 dl.portlet a:visited {
 }
-#content a:hover,
-dl.portlet a:hover {
-}
+
 #content a:target {
     background-color: #ffb;
 }
@@ -1383,7 +1381,6 @@ div.overlay div.close {
     overflow-y: auto;
 }
 .pb-ajax, .pb-image, .overlay iframe {
-    background: none transparent;
     border: 1px solid #999;
     white-space: normal;
 }
